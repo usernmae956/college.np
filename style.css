@@ -1,109 +1,141 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #dfdfdf;
+.flex {
+  display: flex;
+  align-items: center;
 }
-.login-box{
-    display: flex;
-    justify-content: center;
+.container {
+  padding: 0 15px;
+  min-height: 100vh;
+  justify-content: center;
+  background: #f0f2f5;
+}
+.facebook-page {
+  justify-content: space-between;
+  max-width: 1000px;
+  width: 100%;
+}
+.facebook-page .text {
+  margin-bottom: 90px;
+}
+.facebook-page h1 {
+  color: #f21818;
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+.facebook-page p {
+  font-size: 1.75rem;
+  white-space: nowrap;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+form input {
+  height: 55px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  padding: 0 14px;
+}
+form input:focus {
+  outline: none;
+  border-color: #000000;
+}
+::placeholder {
+  color: #777;
+  font-size: 1.063rem;
+}
+.link {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 15px;
+}
+.link .login {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #ffffff;
+  padding: 15px 0;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+.link .login:hover {
+  background: #000000;
+}
+form a {
+  text-decoration: none;
+}
+.link .forgot {
+  color: #1877f2;
+  font-size: 0.875rem;
+}
+.link .forgot:hover {
+  text-decoration: underline;
+}
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ff0000;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.button {
+  margin-top: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.button a {
+  padding: 15px 20px;
+  background: #42b72a;
+  border-radius: 6px;
+  color: #002fff;
+  font-size: 1.063rem;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+.button a:hover {
+  background: #3ba626;
+}
+@media (max-width: 900px) {
+  .facebook-page {
     flex-direction: column;
-    width: 440px;
-    height: 480px;
-    padding: 30px;
-}
-.login-header{
     text-align: center;
-    margin: 20px 0 40px 0;
+  }
+  .facebook-page .text {
+    margin-bottom: 30px;
+  }
 }
-.login-header header{
-    color: #333;
-    font-size: 30px;
-    font-weight: 600;
+@media (max-width: 460px) {
+  .facebook-page h1 {
+    font-size: 3.5rem;
+  }
+  .facebook-page p {
+    font-size: 1.3rem;
+  }
+  form {
+    padding: 15px;
+  }
 }
-.input-box .input-field{
-    width: 100%;
-    height: 60px;
-    font-size: 17px;
-    padding: 0 25px;
-    margin-bottom: 15px;
-    border-radius: 30px;
-    border: none;
-    box-shadow: 0px 5px 10px 1px rgba(0,0,0, 0.05);
-    outline: none;
-    transition: .3s;
-}
-::placeholder{
-    font-weight: 500;
-    color: #222;
-}
-.input-field:focus{
-    width: 105%;
-}
-.forgot{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
-section{
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    color: #555;
-}
-#check{
-    margin-right: 10px;
-}
-a{
-    text-decoration: none;
-}
-a:hover{
-    text-decoration: underline;
-}
-section a{
-    color: #555;
-}
-.input-submit{
-    position: relative;
-}
-.submit-btn{
-    width: 100%;
-    height: 60px;
-    background: #222;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: .3s;
-}
-.input-submit label{
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    color: #fff;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-}
-.submit-btn:hover{
-    background: #000;
-    transform: scale(1.05,1);
-}
-.sign-up-link{
-    text-align: center;
-    font-size: 15px;
-    margin-top: 20px;
-}
-.sign-up-link a{
-    color: #000;
-    font-weight: 600;
-}
+
+
+
+
